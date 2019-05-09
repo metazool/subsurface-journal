@@ -8,4 +8,5 @@ jupyter
 jupyter_client
 nbconvert
 nbval
-gcc
+libgcc==5.2.0
+cxx-compiler
