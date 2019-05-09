@@ -8,6 +8,7 @@ compiler:
   - gcc
 
 install:
+  - sudo apt install build-essential
   - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   - bash miniconda.sh -b -p "$HOME"/miniconda
   - source "$HOME"/miniconda/etc/profile.d/conda.sh
@@ -17,12 +18,12 @@ install:
 
 script:
   # Use Sphinx to make the html docs
+  - conda activate
   - cd docs
   - make html
   - touch _build/html/.nojekyll
   # execute and validate every jupyter notebook we find
   - cd ../
-  - conda activate
   - bash scripts/execute_notebooks.sh
 
 # Tell Travis CI to copy the documentation to the gh-pages branch of
