@@ -1,7 +1,7 @@
 for filename in `find ./submissions -name requirements.txt`
 do
   echo $filename
-  pip install -r $filename
+  conda install --file $filename
 done
 
 for filename in `find ./submissions -name "*.ipynb"`

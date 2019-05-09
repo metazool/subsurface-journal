@@ -1,0 +1,10 @@
+sphinx
+sphinx_rtd_theme
+numpydoc
+jsonschema
+attrs
+pytest
+jupyter
+jupyter_client
+nbconvert
+nbval

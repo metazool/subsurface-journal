@@ -4,11 +4,12 @@ python:
   - 3.6
 
 install:
-  - pip install sphinx
-  - pip install sphinx_rtd_theme
-  - pip install numpydoc
-  - pip install jsonschema attrs --upgrade
-  - pip install pytest jupyter jupyter_client nbconvert nbval
+  - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  - bash miniconda.sh -b -p "$HOME"/miniconda
+  - source "$HOME"/miniconda/etc/profile.d/conda.sh
+  - conda config --set always_yes yes --set changeps1 no --set auto_update_conda false
+  - conda install -f requirements.txt
+  - pip install nbval
 
 script:
   # Use Sphinx to make the html docs
