@@ -8,5 +8,4 @@ jupyter
 jupyter_client
 nbconvert
 nbval
-gcc
-cxx-compiler
+gcc_linux-64
