@@ -7,4 +7,3 @@ pytest
 jupyter
 jupyter_client
 nbconvert
-nbval
