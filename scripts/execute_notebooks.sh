@@ -4,6 +4,9 @@ do
   conda install --file $filename
 done
 
+# At this stage print out the environment for debugging purposes
+set
+
 for filename in `find ./submissions -name "*.ipynb"`
 do
   cd $(dirname "$filename")
