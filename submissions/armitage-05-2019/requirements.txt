@@ -1,3 +1,4 @@
 fenics
 numpy
 matplotlib
+mshr
