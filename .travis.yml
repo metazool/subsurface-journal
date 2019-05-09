@@ -10,7 +10,6 @@ install:
   - conda config --set always_yes yes --set changeps1 no --set auto_update_conda false
   - conda config --add channels conda-forge
   - conda install --file requirements.txt
-  - pip install nbval
 
 script:
   # Use Sphinx to make the html docs
@@ -19,6 +18,7 @@ script:
   - touch _build/html/.nojekyll
   # execute and validate every jupyter notebook we find
   - cd ../
+  - conda activate
   - bash scripts/execute_notebooks.sh
 
 # Tell Travis CI to copy the documentation to the gh-pages branch of
