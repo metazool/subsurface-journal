@@ -1,11 +1,6 @@
-sphinx
-sphinx_rtd_theme
+numpy
 numpydoc
-jsonschema
-attrs
 pytest
-jupyter
-jupyter_client
 nbconvert
 nbval
 gcc_linux-64
